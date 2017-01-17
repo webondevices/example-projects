@@ -1,0 +1,15 @@
+{
+  "name": "temp-log-json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "temp-test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mate Marschalko",
+  "license": "ISC",
+  "dependencies": {
+    "serial": "0.0.9",
+    "serialport": "^4.0.7"
+  }
+}
