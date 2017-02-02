@@ -19,7 +19,7 @@ port.on('open', function() {
 
 		if (moment.getTime() - lastMoment.getTime() > logIntervalMinutes * 60 * 1000) {
 			lastMoment = moment;
-			fs.appendFile('log.txt', (sensorData.temperature + ' , ' +  sensorData.humidity + ' , ' + moment + '\n'), function (err) {
+			fs.appendFile('log.txt', ('\n' + sensorData.temperature + ' , ' +  sensorData.humidity + ' , ' + moment), function (err) {
 			    if (err) return console.log(err);
 			    console.log('Logged data: ', moment);
 			});
