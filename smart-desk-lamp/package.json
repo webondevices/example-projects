@@ -1,0 +1,30 @@
+{
+  "name": "smart-desk-lamp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webondevices/example-projects.git"
+  },
+  "keywords": [
+    "raspberry",
+    "pi",
+    "smart",
+    "home"
+  ],
+  "author": "Mate Marschalko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webondevices/example-projects/issues"
+  },
+  "homepage": "https://github.com/webondevices/example-projects#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "johnny-five": "^0.10.6",
+    "socket.io": "^1.7.2"
+  }
+}

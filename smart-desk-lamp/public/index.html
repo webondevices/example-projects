@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Index</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<label for="red">Red</label>
+	<input type="range" id="red" min="0" value="255" max="255" step="1">
+
+	<label for="green">Green</label>
+	<input type="range" id="green" min="0" value="255" max="255" step="1">
+
+	<label for="blue">Blue</label>
+	<input type="range" id="blue" min="0" value="255" max="255" step="1">
+
+	<button id="random">Random</button>
+
+	<button id="onoff">On/Off</button>
+	
+	<br>
+
+	<label for="flicker">Flicker</label>
+	<input type="range" id="flicker" min="0" value="50" max="100" step="1">
+
+	<button id="listen">Listen</button>
+	<div id="speech-result"></div>
+
+	<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+	<script src="websocket.js"></script>
+</body>
+</html>
