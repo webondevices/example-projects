@@ -12,7 +12,6 @@ function init() {
 
     var randomTicker = null;
     var randomState = false;
-    var flickerRate = 1000;
 
     socket.on('connect', function () {
         connected = true;
@@ -20,6 +19,7 @@ function init() {
 
     socket.on('sync', function(signal){
         colorValues = signal.colorValues;
+        lampState = signal.lampState;
         syncRgb();
     });
 
@@ -49,7 +49,7 @@ function init() {
             };
             syncRgb();
             updateServer();
-        }, flickerRate);
+        }, 250);
     }
 
     function random(){
@@ -73,12 +73,6 @@ function init() {
             onoffBtn.className = '';
         }
         updateServer();
-    }
-
-    function flicker(event){
-        flickerRate = parseInt(event.currentTarget.value) * 20 + 1;
-        clearInterval(randomTicker);
-        addRandomTicker();
     }
 
     function listen(){
@@ -115,9 +109,6 @@ function init() {
 
     var onoffBtn = document.getElementById('onoff');
     onoffBtn.addEventListener('click', onoff);
-
-    var flickerRange = document.getElementById('flicker');
-    flickerRange.addEventListener('change', flicker);
 
     var listenBtn = document.getElementById('listen');
     listenBtn.addEventListener('click', listen);
