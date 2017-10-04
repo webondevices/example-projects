@@ -1,6 +1,10 @@
 #include "DHT.h"
-#define DHTPIN 12     // what digital pin we're connected to
-#define DHTTYPE DHT22   // DHT 22  (AM2302), AM2321
+
+// DHT22 DAT pin 
+#define DHTPIN 12
+
+// Type of DHT sensor
+#define DHTTYPE DHT22
 
 DHT dht(DHTPIN, DHTTYPE);
 
@@ -20,12 +24,14 @@ void loop() {
     return;
   }
 
+  // Create JSON as a message
   message = message + "{\"humidity\": ";
   message = message + h;
   message = message + ", \"temperature\": ";
   message = message + t;
   message = message + "}";
 
+  // Send message
   Serial.println(message);
   
 }
