@@ -1,6 +1,15 @@
 #include <SPI.h>
 #include <MFRC522.h>
 
+// Pin connections:
+// SDA  -> D10
+// SCK  -> D13
+// MOSI -> D11
+// MISO -> D12
+// GND  -> GND
+// RST  -> D9
+// 3.3V -> 3.3V
+
 #define SS_PIN 10
 #define RST_PIN 9
 
