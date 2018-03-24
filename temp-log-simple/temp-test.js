@@ -1,11 +1,11 @@
-var SerialPort = require("serialport");
+const SerialPort = require('serialport');
 
 // Add your USB port name
-var port = new SerialPort("/dev/xy", {
+const port = new SerialPort('/dev/xy', {
 	parser: SerialPort.parsers.readline('\n')
 });
 
-function tryParseJson(str) {
+function tryParseJson (str) {
     try {
         JSON.parse(str);
     } catch (e) {
@@ -16,15 +16,14 @@ function tryParseJson(str) {
 
 console.log('Initialising...');
 
-port.on('open', function() {
+port.on('open', function () {
 	console.log('Opened port...');
 	
-	port.on('data', function(data) {
-		var sensorData = tryParseJson(data);
+	port.on('data', function (data) {
+		const sensorData = tryParseJson(data);
 
-		console.log("Temperature: " + sensorData.temperature + "°C");
-		console.log("   Humidity: " + sensorData.humidity + "%");
-		console.log("===================");
-		console.log("");
+		console.log(`Temperature: ${sensorData.temperature}°C`);
+		console.log(`   Humidity: ${sensorData.humidity}%`);
+		console.log(`===================\n`);
 	});
 });
