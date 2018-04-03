@@ -2,7 +2,7 @@
   "name": "temp-log-json",
   "version": "1.0.0",
   "description": "",
-  "main": "temp-test.js",
+  "main": "temp-log-simple.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
